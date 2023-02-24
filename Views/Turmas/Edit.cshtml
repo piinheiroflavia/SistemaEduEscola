@@ -1,0 +1,45 @@
+﻿@model SistemaEduEscola.Models.Turma
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+
+<h4 style="margin-top:100px">Editar Turma</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CodigoTurma" class="control-label"></label>
+                <input asp-for="CodigoTurma" class="form-control" />
+                <span asp-validation-for="CodigoTurma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdAlunos" class="control-label"></label>
+                <select asp-for="QtdAlunos" class="form-control" asp-items="ViewBag.QtdAlunos" asp-items="ViewBag.NomeAlunos"></select>
+                <span asp-validation-for="QtdAlunos" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div class="form-group">
+                <label asp-for="UnidadeId" class="control-label"></label>
+                <input asp-for="UnidadeId" class="form-control" />
+                <span asp-validation-for="UnidadeId" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <input type="submit" value="Salvar" class="btn btn-dark" /> |
+    <a class="btn btn-dark" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

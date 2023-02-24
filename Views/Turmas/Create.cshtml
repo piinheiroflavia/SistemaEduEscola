@@ -1,0 +1,41 @@
+﻿@model SistemaEduEscola.Models.Turma
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+
+<h4 style="margin-top:100px">Cadastrar Turma</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form class="row g-3" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-md-3">
+                <label asp-for="CodigoTurma" class="control-label">Turma:</label>
+                <input asp-for="CodigoTurma" class="form-control" />
+                <span asp-validation-for="CodigoTurma" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3 ">
+                <label asp-for="QtdAlunos" class="control-label">Nº Alunos:</label>
+                <select asp-for="QtdAlunos" class ="form-control" asp-items="ViewBag.QtdAlunos"></select>
+            </div>
+
+            <div class="col-md-3 ">
+                <label asp-for="UnidadeId" class="control-label">Unidade:</label>
+                <input asp-for="UnidadeId" class="form-control" />
+                <span asp-validation-for="UnidadeId" class="text-danger"></span>
+            </div>
+            <div >
+                <input type="submit" value="Create" class="btn btn-dark" /> |
+                <a class="btn btn-dark" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,113 @@
+﻿@model SistemaEduEscola.Models.Professor
+
+@{
+    ViewData["Title"] = "Informações";
+}
+
+
+<div>
+    <h4 style="margin-top:100px">Informações do Professor</h4>
+    <hr />
+    <table>
+        <thead>
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.NomeProfessor)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.NomeProfessor)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.UnidadeId)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.UnidadeId)
+            </dd>
+        </dl>
+        </thead>
+    </table>
+</div>
+<div>
+
+
+    <a class="btn btn-dark" asp-action="Index">Voltar</a> |
+    <!--EDITAR  -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModall">
+        Editar
+    </button> |
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <form class="row g-3" asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+
+                                <div class="col">
+                                    <label asp-for="NomeProfessor" class="control-label">Professor</label>
+                                    <input asp-for="NomeProfessor" class="form-control" />
+                                    <span asp-validation-for="NomeProfessor" class="text-danger"></span>
+
+                                    <label asp-for="MateriaId" class="control-label">Matéria</label>
+                                    <input asp-for="MateriaId" class="form-control" />
+                                    <span asp-validation-for="MateriaId" class="text-danger"></span>
+
+                                    <label asp-for="UnidadeId" class="control-label">Unidade</label>
+                                    <input asp-for="UnidadeId" class="form-control" />
+                                    <span asp-validation-for="UnidadeId" class="text-danger"></span>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input type="submit" value="Salvar" class="btn btn-dark" /> |
+                                    <a class="btn btn-dark" asp-action="Details">Voltar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    @section Scripts {
+                        @{
+                            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!--EXCLUIR -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Excluir
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir Unidade</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja excluir essa unidade?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Deletar" class="btn btn-danger" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

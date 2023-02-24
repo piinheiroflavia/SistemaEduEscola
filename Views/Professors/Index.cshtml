@@ -1,0 +1,80 @@
+﻿@model IEnumerable<SistemaEduEscola.Models.Professor>
+
+@{
+    ViewData["Title"] = "Professor";
+}
+
+<h1 style="margin-top:100px">Professor</h1>
+<br>
+
+<div class="row-md-12">
+    <div class="col-8">
+    </div>
+    <div class="col-4">
+
+        <form class="d-flex" role="Pesquisar">
+            @using (Html.BeginForm("Index", "Professors", FormMethod.Get))
+            {
+
+                <input class="form-control" type="search" placeholder="Pesquisar nome" aria-label="Pesquisar" @Html.TextBox("Pesquisar");>
+
+                <button type="submit" value="Procurar" class=" btn-dark text-white" aria-label="Pesquisar" style="border-radius:3px; margin-right: 5px ">Procurar</button>
+                <button type="submit" class=" btn-dark text-white" aria-label="Pesquisar" style="border-radius:3px" asp-action="Create">Cadastrar</button>
+            }
+        </form>
+        <br>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr class="table-dark border-color-dark">
+            <th>
+                <h6>Professor</h6>
+                @*@Html.DisplayNameFor(model => model.NomeProfessor)*@
+            </th>
+            <th>
+                <h6>Matéria</h6>
+               @* @Html.DisplayNameFor(model => model.MateriaId)*@
+            </th>
+            <th>
+                <h6>Unidade</h6>
+               @* @Html.DisplayNameFor(model => model.UnidadeId)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProfessor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MateriaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeId)
+            </td>
+            <td>
+                    @*<a asp-action="Edit" asp-route-id="@item.Id">
+                <span class="material-symbols-outlined" style="color: #000 ">
+                edit
+                </span>
+                </a> *@
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                        <span class="material-symbols-outlined" style="color: #000 ">
+                            info
+                        </span>
+                    </a>
+                    @*<a asp-action="Delete" asp-route-id="@item.Id">
+                <span class="material-symbols-outlined" style="color: #000 ">
+                delete
+                </span>
+                </a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

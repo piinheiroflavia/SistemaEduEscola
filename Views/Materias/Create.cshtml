@@ -1,0 +1,50 @@
+﻿@model SistemaEduEscola.Models.Materia
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+
+<h4 style="margin-top:100px">Cadastrar Matéria</h4>
+<hr />
+<div class="row">
+    <div class="row">
+        <form class="row g-3" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-md-6">
+                <label asp-for="NomeMateria" class="control-label">Matéria:</label>
+                <input asp-for="NomeMateria" class="form-control" />
+                <span asp-validation-for="NomeMateria" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Professor" class="control-label">Professor:</label>
+                <input asp-for="Professor" class="form-control" />
+                <span asp-validation-for="Professor" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="TurmaId" class="control-label">Turma:</label>
+                <input asp-for="TurmaId" class="form-control" />
+                <span asp-validation-for="TurmaId" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="UnidadeId" class="control-label">Unidade</label>
+                <select asp-for="UnidadeId" class ="form-control" asp-items="ViewBag.UnidadeId"></select>
+            </div>
+            <div>
+                <input type="submit" value="Create" class="btn btn-dark" /> |
+                <a class="btn btn-dark" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <input type="submit" value="Cadastrar" class="btn btn-dark" /> |
+    <a class="btn btn-dark" asp-action="Index">Voltar</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

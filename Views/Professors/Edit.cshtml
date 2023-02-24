@@ -1,0 +1,40 @@
+﻿@model SistemaEduEscola.Models.Professor
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h4 style="margin-top:100px">Editar Professor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form class="row g-3" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="col-md-6">
+                <label asp-for="NomeProfessor" class="control-label"></label>
+                <input asp-for="NomeProfessor" class="form-control" />
+                <span asp-validation-for="NomeProfessor" class="text-danger"></span>
+
+                <label asp-for="MateriaId" class="control-label"></label>
+                <input asp-for="MateriaId" class="form-control" />
+                <span asp-validation-for="MateriaId" class="text-danger"></span>
+
+                <label asp-for="UnidadeId" class="control-label"></label>
+                <input asp-for="UnidadeId" class="form-control" />
+                <span asp-validation-for="UnidadeId" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input type="submit" value="Salvar" class="btn btn-dark" /> |
+                <a class="btn btn-dark" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
