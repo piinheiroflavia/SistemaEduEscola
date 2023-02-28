@@ -1,14 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h2>Sistema Escolar </h2>
-<br>
+
+<img src="~/imgs/background escola .jpg" class="img" style="height:350px; width:auto; margin: 20px 0px" alt="background escolar">
+@*
 
 <div class="line">
     <div class="container text-center">
@@ -16,37 +11,139 @@
             <div class="col" style="width: 18rem;">
                 <div class="card-body text-center text-bg-warning" style="padding:40px;  border-radius:5px">
                     <h4 class="card-title text-dark">Sobre Nossas</h4><br />
-                    <h6><a class="nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidade</a></h6>
+                    <h6></h6>
                     
                 </div>
             </div>
             <div class="col" style="width: 18rem;"> 
                 <div class="card-body text-center text-bg-warning" style="padding:40px; border-radius:5px">
                     <h4 class="card-title text-dark">Sobre Nossos</h4><br />
-                    <h6><a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a></h6>
+                    <h6></h6>
                     
                 </div>
             </div> 
             <div class="col" style="width: 18rem; "> 
                 <div class="card-body text-center text-bg-warning" style="padding:40px; border-radius:5px">
                     <h4 class="card-title text-dark">Sobre Nossas</h4><br />
-                    <h6><a class="nav-link text-dark" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</a></h6>
+                    
                     
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card-body text-center text-bg-warning" style="padding:40px; border-radius:5px">
                     <h4 class="card-title text-dark">Sobre Nossas</h4><br />
-                    <h6><a class="nav-link text-dark" asp-area="" asp-controller="Materias" asp-action="Index">Matérias</a></h6>
+                    <h6></h6>
                     
                 </div>
             </div>
             <div class="col" style="width: 18rem;">
                 <div class="card-body text-center text-bg-warning" style="padding:40px; border-radius:5px">
                     <h4 class="card-title text-dark">Sobre Nossos</h4><br />
-                    <h6><a class="nav-link text-dark" asp-area="" asp-controller="Professors" asp-action="Index">Professores</a></h6>
+                    <h6></h6>
                     
                 </div>
             </div>
         </div>
 </div>
+*@
+<hr style="border: solid 2px blue;  margin: 20px 0px">
+
+    <div class="row " >
+        <div class="col">
+            <div class="card" style="width: 15rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+                <img src="~/imgs/escola.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nossas Unidades</h5>
+                    <p class="card-text">Adicionar cadastros, obter e informações e muito mais.</p>
+                    <button id="btn-tela-principal" class="nav-link text-dark text-center" asp-area="" asp-controller="Unidades" asp-action="Index">Saber Mais </button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 15rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+                <img src="~/imgs/aluno.jpg" class="card-img-top" alt="imagem unidade">
+                <div class="card-body">
+                    <h5 class="card-title">Nossos Alunos</h5>
+                    <p class="card-text">Adicionar cadastros, obter e informações e muito mais.</p>
+                    <button id="btn-tela-principal" class="nav-link text-dark text-center" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos </button>                   
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 15rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+                <img src="~/imgs/turma.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nossas Turma</h5>
+                    <p class="card-text">Adicionar cadastros, obter e informações e muito mais.</p>
+                    <button id="btn-tela-principal" class="nav-link text-dark text-center" asp-area="" asp-controller="Turmas" asp-action="Index">Turmas</button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col" >
+            <div class="card" style="width: 15rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+                <img src="~/imgs/escola.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nossas Matéria</h5>
+                    <p class="card-text">Adicionar cadastros, obter e informações e muito mais.</p>
+                    <button id="btn-tela-principal" class="nav-link text-dark text-center" asp-area="" asp-controller="Materias" asp-action="Index">Matérias </button>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col" >
+            <div class="card" style="width: 15rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+                <img src="~/imgs/professora.jpg" class="card-img-top" alt="mulher-lendo-algo-para-seus-alunos">
+                <div class="card-body">
+                    <h5 class="card-title">Nossos Professor</h5>
+                    <p class="card-text">Adicionar cadastros, obter e informações e muito mais.</p>
+                    <button id="btn-tela-principal" class="nav-link text-dark text-center" asp-area="" asp-controller="Professors" asp-action="Index">Professores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+        a{
+            
+        }
+        #btn-tela-principal {
+            align-self: center;
+            background-color: #fff;
+            background-image: none;
+            background-position: 0 90%;
+            background-repeat: repeat no-repeat;
+            background-size: 4px 3px;
+            border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+            border-style: solid;
+            border-width: 2px;
+            box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+            box-sizing: border-box;
+            color: #41403e;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Neucha, sans-serif;
+            font-size: 1rem;
+            line-height: 23px;
+            outline: none;
+            padding: .75rem;
+            text-decoration: none;
+            transition: all 235ms ease-in-out;
+            border-bottom-left-radius: 15px 255px;
+            border-bottom-right-radius: 225px 15px;
+            border-top-left-radius: 255px 15px;
+            border-top-right-radius: 15px 225px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        #btn-tela-principal:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
+
+        #btn-tela-principal:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
+</style>

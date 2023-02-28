@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Flavi\\OneDrive\\Desktop\\SistemaEduEscola\\SistemaEduEscola.csproj": {}
+    "C:\\Users\\ana.pinheiro\\Desktop\\SistemaEduEscola\\SistemaEduEscola\\SistemaEduEscola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Flavi\\OneDrive\\Desktop\\SistemaEduEscola\\SistemaEduEscola.csproj": {
+    "C:\\Users\\ana.pinheiro\\Desktop\\SistemaEduEscola\\SistemaEduEscola\\SistemaEduEscola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Flavi\\OneDrive\\Desktop\\SistemaEduEscola\\SistemaEduEscola.csproj",
+        "projectUniqueName": "C:\\Users\\ana.pinheiro\\Desktop\\SistemaEduEscola\\SistemaEduEscola\\SistemaEduEscola.csproj",
         "projectName": "SistemaEduEscola",
-        "projectPath": "C:\\Users\\Flavi\\OneDrive\\Desktop\\SistemaEduEscola\\SistemaEduEscola.csproj",
-        "packagesPath": "C:\\Users\\Flavi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Flavi\\OneDrive\\Desktop\\SistemaEduEscola\\obj\\",
+        "projectPath": "C:\\Users\\ana.pinheiro\\Desktop\\SistemaEduEscola\\SistemaEduEscola\\SistemaEduEscola.csproj",
+        "packagesPath": "C:\\Users\\ana.pinheiro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ana.pinheiro\\Desktop\\SistemaEduEscola\\SistemaEduEscola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Flavi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ana.pinheiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,7 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="imgs\**" />
+    <Content Remove="imgs\**" />
+    <EmbeddedResource Remove="imgs\**" />
+    <None Remove="imgs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="wwwroot\escola.jpg" />
+    <Content Remove="wwwroot\imgs\escola.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,5 +34,10 @@
   <ItemGroup>
     <Folder Include="img\" />
     <Folder Include="NovaPasta\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\escola.jpg" />
+    <None Include="wwwroot\imgs\escola.jpg" />
   </ItemGroup>
 </Project>
